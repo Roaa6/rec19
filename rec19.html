@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link type="text/css" href="style.css" rel="stylesheet" >
+
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <meta charset="utf-8">
+      <link rel="icon" href="logo%20(2).PNG">
+
+    <title>Recruitment 19</title>
+      
+    <style>
+          .rg-box{
+        z-index: 9999;
+      width:40%;
+      height:cover;
+      background: black;
+        background: rgba(0,0,0,0.8);
+      color: #fff;
+      top:100%;
+      position: absolute;
+      left:50%;
+      transform: translate(-50%,-50%);
+      box-sizing: border-box;
+      padding:70px 30px;
+        border-radius: 40px;
+    }
+    @media screen and (max-width:1024px){
+        .rg-box{width:90% !important;
+                top:500px}
+    }
+    </style>
+    
+  </head>
+  <body style="postion:absolute">
+    <div class="rg-box">
+    <img src="logo%20(2).PNG" class="STP">
+
+    <h1>STP'19 Recruitment</h1>
+<form>
+ <div class="form-label-group">
+   <label for="name">Full Name</label>
+   <input type="text" class="form-control" autocomplete="off" placeholder="Your Full Name" name="name" id="name" aria-describedby="emailHelp" >
+     
+ </div>
+ <div class="form-group">
+   <label for="number">Mobile Number</label>
+   <input type="tel" id="number" autocomplete="off" class="form-control" name="mobile" placeholder="Your answer">
+ </div>
+    <div class="form-group">
+   <label for="mail">E-mail</label>
+   <input type="email" autocomplete="off" id="mail" class="form-control" name='email' placeholder="Your answer">
+ </div>
+    <div class="form-group">
+   <label for="un">University</label>
+   <input type="text" id="un" autocomplete="off" class="form-control" name="university" placeholder="Your answer">
+ </div>
+    <div class="form-group">
+   <label for="faculty">Faculty</label>
+   <input type="text" id="faculty" name="faculty" class="form-control" autocomplete="off" placeholder="Your answer">
+ </div>
+    <div class="form-group">
+   <label for="major">Major</label>
+   <input type="text" id="major" name="major"  class="form-control" autocomplete="off" placeholder="Your answer">
+ </div>
+    <div class="form-group">
+   <label for="gy">Graduation Year</label>
+   <input type="number" id="gy" name="graduation_year" class="form-control" placeholder="select a year">
+ </div>
+    
+     <div class="form-group">
+   <label for="gy">Reasons For Apply</label>
+  <textarea placeholder="Your answer" rows="10" id="reasons" cols="50" class="form-control" name="reasons_for_apply" required>
+    </textarea>
+ </div>
+ <div class="form-group">
+   <label for="w">Select your workshop</label>
+   <select class="form-control" id="w" required>
+  <option value="" disabled>Select Your first preference</option>
+      <option value="Android">Android</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Mechanics">Mechanics</option>
+      <option value="Renewable">Renewable</option>
+      <option value="Digital marketing">Digital marketing</option>
+      <option value="Supply chain">Supply chain</option>
+      <option value="Project management">Project management</option>
+      <option value="Economics for startups">Economics for startups</option>
+   </select>
+ </div>
+    
+    <div class="form-group">
+   <label for="test">Select Your Test Slots "essential"</label>
+   <select class="form-control" id="test" required>
+  <option value="" disabled> 19/11 Monday</option>
+      <option value="1M"> 4-5 PM</option>
+      <option value="2M"> 5-6 PM</option>
+      <option value="3M"> 6-7 PM</option>
+      <option value="" disabled> 21/11 Wen</option>
+      <option value="1W"> 4-5 PM </option>
+      <option value="2W"> 5-6 PM </option>
+      <option value="3W"> 6-7 PM </option>
+
+   </select>
+ </div>
+    <input type="submit" value="submit" class="btn btn-primary" name="submit" onclick="myFunction()">   
+
+</form>
+</div>
+
+        <script type="text/javascript">
+        function myFunction (){
+            var name = document.getElementById('name').value;
+            var mail = document.getElementById('mail').value;
+            var number = document.getElementById('number').value;
+            var University = document.getElementById('un').value;
+            var Faculty =document.getElementById('faculty').value;
+            var graduation=document.getElementById('gy').value;
+             var major = document.getElementById('major').value;
+            var reasons=document.getElementById('reasons').value;
+            if (name == ''|| mail =='' || number == ''|| University =='' || Faculty == '' || major =='' || gy ==''|| reasons=='' ){
+                alert('Please complete all fields ');
+                return false;
+            }
+            else if (name.length<5){
+                alert('Your full-name must be at least 5 characters');
+                return false;
+            }
+            else if (isNaN(number)||number.indexOf(" ")!=-1 || number.length !=11)
+               {
+                    alert("Enter a valid phone number");
+                    return false;
+               }
+            else  if (number.charAt(0)!="0" && number.charAt(1)!="1")
+               {
+                    alert("Phone number should start with 01");
+                    return false
+               }
+            else {return true;}
+        }
+                // Some random colors
+const colors = ["#3CC157", "#2AA7FF", "#1B1B1B", "#FCBC0F", "#F85F36"];
+const numBalls = 100;
+const balls = [];
+for (let i = 0; i < numBalls; i++) {
+  let ball = document.createElement("div");
+  ball.classList.add("ball");
+  ball.style.background = colors[Math.floor(Math.random() * colors.length)];
+  ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
+  ball.style.top = `${Math.floor(Math.random() * 200)}vh`;
+  ball.style.transform = `scale(${Math.random()})`;
+  ball.style.width = `${Math.random()}em`;
+  ball.style.height = ball.style.width;
+  
+  balls.push(ball);
+  document.body.append(ball);
+}
+// Keyframes
+balls.forEach((el, i, ra) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -11 : 11),
+    y: Math.random() * 12
+  };
+  let anim = el.animate(
+    [
+      { transform: "translate(0, 0)" },
+      { transform: `translate(${to.x}rem, ${to.y}rem)` }
+    ],
+    {
+      duration: (Math.random() + 1) * 2000, // random duration
+      direction: "alternate",
+      fill: "both",
+      iterations: Infinity,
+      easing: "ease-in-out"
+    }
+  );
+});
+        </script>
+
+  </body>
+
+
+</html>
